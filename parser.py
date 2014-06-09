@@ -12,16 +12,12 @@ def get_par():
 	#user = raw_input('User name (ex. Msitake): ')
 	#limit = int(input('Numer of tracks (1-10): '))
 	query_params={
-		'format':'json',
-		'method':'user.getTopTracks',
-    	'api_key':'feb6a11462770094deb399428767f32f',
-    	'user':user,
-    	'limit':limit,
-    	'period':'overall'}
+		'q':'Krakow',
+		'units':'metric'}
 	return query_params, limit, user
 
 def get_dat(ppp):
-	endpoint = 'http://ws.audioscrobbler.com/2.0/'
+	endpoint = 'http://api.openweathermap.org/data/2.5/weather/'
 	response = requests.get(endpoint, params=ppp)
 	data = response.json()
 	return data
@@ -41,15 +37,6 @@ with open("results.html", "w") as textfile:
 	textfile.write(" tracks from user: ")
 	textfile.write(str(user)) 
 	textfile.write("!</h2></p>")
-	for i in range(0, li):
-		textfile.write("<p>")
-		textfile.write(str(data['toptracks']['track'][i]['@attr']['rank']))
-		textfile.write("| ")
-		textfile.write(str(data['toptracks']['track'][i]['artist']['name']))
-		textfile.write(" -") 
-		textfile.write(str(data['toptracks']['track'][i]['name'])) 
-		textfile.write(" ")
-		textfile.write(str(data['toptracks']['track'][i]['playcount']))
-		textfile.write("</p>")
+	
 	textfile.write("<br/><br/></div></body></html>")
 
