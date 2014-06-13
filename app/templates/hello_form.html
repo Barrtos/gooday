@@ -1,9 +1,22 @@
-<h1>Fill Out This Form</h1>
+<div style="
+	background-color: rgba(255, 255, 255, 0.6); 
+	width: 400px;
+    height: 200px;
+	position: absolute;
+    top:0;
+    bottom: 100;
+    left: 0;
+    right: 0;
+	margin: auto;
+	border-radius: 10px;">
+
+<h1 style="text-align:center;">Setup your morning :)</h1>
 
 <form action="/hello" method="POST"> <!--collect data, send to server using POST request, send to /hello url-->
-    A Greeting: <input type="text" name="greet">
+    City: <input type="text" name="city">
     <br/>
     Your Name: <input type="text" name="name">
     <br/>
     <input type="submit">
 </form>
+<div>

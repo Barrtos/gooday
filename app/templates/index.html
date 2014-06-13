@@ -1,7 +1,47 @@
-$def with (greeting)
+$def with (greeting, temperature, desc)
 
 $if greeting:
-    I just wanted to say <em style="color: green; font-size: 2em;">$greeting</em>.
-    <a href="http://0.0.0.0:8080/hello">Morning setup</a>
+    <em style="color: white; font-size: 5em; text-align:center;">$greeting</em>
+
 $else:
-    <em>Hello</em>, world!
+    <em>GooD'ay!</em>
+
+
+<!--BREAK-->
+<div style="width: 50px;
+    height: 100px;">
+</div>
+
+$if temperature:
+	<!--TEMPERATURE-->
+	<div style="
+		background-color: rgba(255, 255, 255, 0.6); width: 250px;height: 250px;float: left;color: white; font-size: 6em; text-align:center;">$temperature</div>
+
+	<!--BREAK-->
+	<div style="width: 50px;height: 250px;float: left;"></div>
+
+$else:
+	<!--BREAK-->
+	<div style="width: 50px;height: 250px;float: left;"></div>
+
+
+<!--GROOVESHARK-->
+<div style="float: left;>
+<object width="250" height="250" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="gsPlaylist9858105499" name="gsPlaylist9858105499"><param name="movie" value="http://grooveshark.com/widget.swf" /><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=98581054&p=1&bbg=a8a8a8&bth=a8a8a8&pfg=a8a8a8&lfg=a8a8a8&bt=ffffff&pbg=ffffff&pfgh=ffffff&si=ffffff&lbg=ffffff&lfgh=ffffff&sb=ffffff&bfg=ffc800&pbgh=ffc800&lbgh=ffc800&sbh=ffc800" /><object type="application/x-shockwave-flash" data="http://grooveshark.com/widget.swf" width="250" height="250"><param name="wmode" value="window" /><param name="allowScriptAccess" value="always" /><param name="flashvars" value="hostname=grooveshark.com&playlistID=98581054&p=1&bbg=a8a8a8&bth=a8a8a8&pfg=a8a8a8&lfg=a8a8a8&bt=ffffff&pbg=ffffff&pfgh=ffffff&si=ffffff&lbg=ffffff&lfgh=ffffff&sb=ffffff&bfg=ffc800&pbgh=ffc800&lbgh=ffc800&sbh=ffc800" /><span><a href="http://grooveshark.com/search/playlist?q=z.morning%20Kestrel" title="z.morning by Kestrel on Grooveshark">z.morning by Kestrel on Grooveshark</a></span></object></object>
+</div>
+
+<!--BREAK-->
+<div style="width: 50px;height: 250px;float: left;"></div>
+
+<!--WEATHER DESCRIPTION-->
+<div style="background-color: rgba(255, 255, 255, 0.6); width: 250px;height: 250px;float: left;color: white; font-size: 4em; text-align:center;">
+	$desc
+</div>
+
+<br>
+
+<!--BREAK-->
+<div style="width: 50px;height: 100px;"></div>
+
+<div style="width: 50px;
+    height: 100px;"><a href="http://0.0.0.0:8080/hello">setup</a>
